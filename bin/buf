@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# coding: utf-8
+
+require 'tilt'
+
+Dir['./invoices/*.yml'].each do |invoice_file|
+  invoice_data = YAML.load_file(invoice_file)
+  invoice = Tilt.new('./template.haml')
+  html = invoice.render(invoice_data)
+  puts html
+end
