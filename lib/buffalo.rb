@@ -1,5 +1,5 @@
-require "buffalo/version"
+require 'buffalo/version'
+require 'buffalo/bill'
 
 module Buffalo
-  # Your code goes here...
 end
