@@ -10,3 +10,4 @@ A minimalist invoice generator
 ## TODO
 
  * Add an example/ folder
+
