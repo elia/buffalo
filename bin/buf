@@ -3,7 +3,14 @@
 
 require 'buffalo'
 bill = Buffalo::Bill.new File.expand_path('.')
-bill.make_all_invoices
+
+if ARGV.empty?
+  bill.make_all_invoices
+else
+  ARGV.each do |file|
+    bill.make_invoice File.expand_path(file)
+  end
+end
 
 # if %w[--watch -w].any? { |opt| ARGV.include? opt }
 #   bill.watch!
